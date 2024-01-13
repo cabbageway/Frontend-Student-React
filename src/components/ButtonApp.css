@@ -1,0 +1,6 @@
+#flex {
+display:flex;
+justify-content: space-evenly;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
