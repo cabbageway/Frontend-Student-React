@@ -7,7 +7,7 @@ import {Container, Paper} from "@mui/material";
 import Button from "@mui/material/Button";
 import {IStudent} from "../../models/interface";
 
-const Student = () => {
+const StudentMongo = () => {
 
     const paperStyle = {padding: `50px, 20px`, width:500, margin:"20px, auto"};
     const [name, setName] = useState("");
@@ -18,8 +18,9 @@ const Student = () => {
 
     useEffect(() => {
         // für die Spring Boot Geschichte
-        fetch("http://localhost:8080/student/getAll")
-        // fetch("http://localhost:4000/show")
+        //fetch("http://localhost:8080/student/getAll")
+        // für die MongoDB
+        fetch("http://localhost:4000/show")
             .then(res => res.json()
                 .then(data=>{
                     console.log(data);
@@ -55,4 +56,4 @@ const Student = () => {
     );
     }
 
-export default Student;
+export default StudentMongo;
